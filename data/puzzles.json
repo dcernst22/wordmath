@@ -1,0 +1,7 @@
+[
+  { "id": 1, "date": "2026-01-01", "answer": "APPLE", "hint": "A common fruit" },
+  { "id": 2, "date": "2026-01-02", "answer": "TRAIN", "hint": "Runs on tracks" },
+  { "id": 3, "date": "2026-01-03", "answer": "CLOUD", "hint": "Drifts in the sky" },
+  { "id": 4, "date": "2026-01-04", "answer": "BRICK", "hint": "Building block" },
+  { "id": 5, "date": "2026-01-05", "answer": "SWEET", "hint": "Sugary taste" }
+]
