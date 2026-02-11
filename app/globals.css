@@ -1,0 +1,159 @@
+:root {
+  color-scheme: dark;
+  --bg: #121212;
+  --panel: #1d1d1d;
+  --text: #f2f2f2;
+  --muted: #9d9d9d;
+  --border: #383838;
+  --correct: #2a9d5b;
+  --present: #b69a2e;
+  --absent: #444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 460px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 1rem 0.9rem 1.2rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.modeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.modeRow button {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.modeRow .active {
+  border-color: #7da3ff;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.board {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.35rem;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: #171717;
+}
+
+.cell.correct {
+  background: var(--correct);
+}
+
+.cell.present {
+  background: var(--present);
+}
+
+.cell.absent {
+  background: var(--absent);
+}
+
+.message {
+  min-height: 1.4rem;
+  font-size: 0.9rem;
+}
+
+.keyboard {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.keyRow {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.key {
+  border: none;
+  background: #2c2c2c;
+  color: var(--text);
+  border-radius: 8px;
+  min-width: 2rem;
+  height: 2.8rem;
+  font-weight: 700;
+  padding: 0 0.55rem;
+}
+
+.key.wide {
+  min-width: 3.7rem;
+  font-size: 0.8rem;
+}
+
+.key.correct {
+  background: var(--correct);
+}
+
+.key.present {
+  background: var(--present);
+}
+
+.key.absent {
+  background: var(--absent);
+}
+
+@media (max-width: 380px) {
+  .key {
+    min-width: 1.8rem;
+    height: 2.4rem;
+    font-size: 0.75rem;
+    padding: 0 0.4rem;
+  }
+
+  .key.wide {
+    min-width: 3.2rem;
+  }
+}
